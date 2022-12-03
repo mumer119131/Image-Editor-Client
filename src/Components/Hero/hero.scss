@@ -1,0 +1,20 @@
+@use "../../variables" as *;
+
+
+
+.hero__section{
+    margin: 0;
+    text-align: center;
+    h1{
+        color: $colorPrimaryVariant;
+        font-size: 2.5rem;
+    }
+    p{
+        color: $colorSecondry;
+        font-weight: 400;
+        margin: 0.2rem 0 !important;
+        span{
+            color: $colorPrimaryVariant;
+        }
+    }
+}

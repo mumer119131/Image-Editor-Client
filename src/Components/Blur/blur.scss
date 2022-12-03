@@ -1,0 +1,124 @@
+@use "../../variables.scss" as *;
+
+
+.uploader__section{
+    border: 1px dashed black;
+    margin: 4rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    flex-direction: column;
+    overflow-y: auto;
+
+    h2{
+        font-size: 2.2rem;
+        span{
+            color : $colorPrimaryVariant;
+            letter-spacing: 2px;
+        }
+    }
+    input[type="file"]{
+        margin-top: 3rem;
+        display: none;
+    }
+    .custom__file__upload{
+        border: 1px solid gray;
+        padding: 0.4rem 2rem;
+        margin-top: 2rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: $transition;
+    }
+    .custom__file__upload:hover{
+        background-color: $colorSecondry;
+        color: white;
+        letter-spacing: 1px;
+    }
+    button{
+        width: 5rem;
+        margin-top: 1rem;
+    }
+    img{
+        height: 300px;
+        -webkit-box-shadow: 2.5px 9.5px 13.5px 10px #dddddd;
+        -moz-box-shadow: 2.5px 9.5px 13.5px 10px #dddddd;
+        box-shadow: 2.5px 9.5px 13.5px 10px #dddddd;
+        transition: $transition;
+    }
+    img:hover{
+        height: 400px;
+        -webkit-box-shadow: 2.5px 9.5px 13.5px 10px rgba($colorPrimaryVariant, 0.6);
+        -moz-box-shadow: 2.5px 9.5px 13.5px 10px rgba($colorPrimaryVariant, 0.6);
+        box-shadow: 2.5px 9.5px 13.5px 10px rgba($colorPrimaryVariant, 0.6);
+    }
+    .images__container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .range__value__label{
+        margin-top: 1rem;
+        input{
+            width: 20rem;
+        }
+    }
+    button{
+        padding: 0.8rem 2rem;
+        display: flex;
+        justify-content: center;
+        width: 15rem;
+        border : 1px solid transparent;
+        background-color: $colorSecondry;
+        color: white;
+        border-radius: 8px;
+        transition: $transition;
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: transparent;
+        border: 1px solid $colorSecondry;
+        color: $colorSecondry;
+        letter-spacing: 1px;
+    }
+    button:disabled{
+        background-color: gray;
+        pointer-events: none;
+    }
+    a{
+        color: $colorPrimaryVariant;
+        margin-top: 1rem;
+    }
+    .error{
+        color: red;
+    }
+}
+
+/* ==================MEDIA QURIES (MEDIUM DEVICES)=============== */
+
+@media screen and (max-width:1024px){
+    
+  }
+  
+  /* ==================MEDIA QURIES (SMALL DEVICES)=============== */
+  
+  @media screen and (max-width:600px) {
+    .uploader__section{
+        margin: 1rem;
+        img{
+            height: 150px;
+        }
+        img:hover{
+            height: 180px;
+        }
+        .range__value__label{
+            input{
+                width: 15rem;
+            }
+        }
+    }
+
+  }

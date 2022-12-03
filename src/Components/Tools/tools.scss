@@ -1,0 +1,30 @@
+
+@use "../../variables.scss" as *;
+
+.tools__section{
+    display: flex;
+    padding:  2rem 5rem 0rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    a{
+        border-radius: 16px;
+        padding: 0.3rem 1rem;
+        color: $colorPrimaryVariant;
+        background-color: rgba($color: $colorPrimaryVariant, $alpha: 0.2);
+        text-decoration: none;
+        transition: $transition;
+
+    }
+    a:hover{
+        letter-spacing: 1px;
+        background-color: rgba($color: $colorPrimaryVariant, $alpha: 0.4);
+    }
+}
+
+ /* ==================MEDIA QURIES (SMALL DEVICES)=============== */
+  
+ @media screen and (max-width:600px) {
+   .tools__section{
+    padding: 1rem 1rem 0rem;
+   }
+  }
